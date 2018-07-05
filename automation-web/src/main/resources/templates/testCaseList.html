@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!--<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+    <meta charset="UTF-8"/>
+    <title>test case</title>
+</head>
+<body>
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>case名</th>
+        </tr>
+        <tr th:each="testcase:${testCaseInstances}">
+            <!--<th scope="row" th:text="${collect.id}">1</th>-->
+            <!--<td >-->
+            <!--<img th:src="${collect.webLogo}"/>-->
+            <!--</td>-->
+            <td th:text="${testcase.name}">xxxx</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
